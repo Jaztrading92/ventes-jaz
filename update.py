@@ -1,4 +1,4 @@
-﻿import os
+import os
 import json
 import datetime
 import urllib.request
@@ -11,7 +11,10 @@ DAYS = 90
 
 
 def get(params):
-    req = urllib.request.Request(API + "?" + urllib.parse.urlencode(params), headers={"Authorization": "Bearer " + KEY, "Accept": "application/json"})
+    req = urllib.request.Request(
+        API + "?" + urllib.parse.urlencode(params),
+        headers={"Authorization": "Bearer " + KEY, "Accept": "application/json", "User-Agent": "jaz-ventes/1.0"},
+    )
     with urllib.request.urlopen(req, timeout=30) as r:
         return json.load(r)
 

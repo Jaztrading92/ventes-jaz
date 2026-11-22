@@ -1,0 +1,25 @@
+name: Mise a jour des ventes
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: ventes
+  cancel-in-progress: true
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Lire Chariow
+        run: python update.py
+        env:
+          CHARIOW_KEY: ${{ secrets.CHARIOW_KEY }}
+      - name: Publier
+        run: |
+          git config user.name "ventes-bot"
+          git config user.email "ventes-bot@users.noreply.github.com"
+          git add ventes.json
+          git diff --cached --quiet || (git commit -m "Mise a jour des ventes" && git push)

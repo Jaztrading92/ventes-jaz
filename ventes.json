@@ -2,6 +2,13 @@
  "day": "2026-11-23",
  "sales": [
   {
+   "id": "SALERFR1H0CTF4CE4ZT",
+   "t": "2026-11-23T17:32:57.000000Z",
+   "prix": 10489.0,
+   "paye": 10489.0,
+   "p": "Pack Stratège JAZ : Crée ta stratégie + 200 indicateurs institutionnels"
+  },
+  {
    "id": "SALEUU7YF4Q3569LCSV",
    "t": "2026-11-22T15:24:34.000000Z",
    "prix": 10489.0,

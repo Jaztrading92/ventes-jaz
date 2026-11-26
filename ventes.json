@@ -1,5 +1,5 @@
 {
- "day": "2026-11-25",
+ "day": "2026-11-26",
  "sales": [
   {
    "id": "SALEA5OC4O1IWAVKO96",
@@ -350,13 +350,6 @@
    "prix": 4591.0,
    "paye": 4591.0,
    "p": "Indicateurs institutionnels avancés"
-  },
-  {
-   "id": "SALEGBQR5MMRHD8R8QO",
-   "t": "2026-08-27T15:42:12.000000Z",
-   "prix": 11145.0,
-   "paye": 11145.0,
-   "p": "Créer sa propre stratégie de trading"
   }
  ]
 }
